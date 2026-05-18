@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>个人简介 — AI大模型平台运营专家</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:#fff;color:#111;line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:800px;margin:0 auto;padding:0 44px}
+
+/* NAV */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:999;
+  border-bottom:1px solid #ebebeb;
+  background:rgba(255,255,255,.94);backdrop-filter:blur(16px);
+}
+.nav-inner{
+  max-width:800px;margin:0 auto;padding:0 44px;
+  height:52px;display:flex;align-items:center;justify-content:space-between;
+}
+.nav-brand{font-size:11px;color:#c0c0c0;letter-spacing:.14em;text-transform:uppercase}
+.nav-links{display:flex;gap:4px}
+.nav-links a{font-size:13px;color:#888;padding:5px 14px;border-radius:6px;transition:all .18s}
+.nav-links a:hover{color:#111;background:#f5f5f5}
+.nav-links a.on{color:#111;background:#f0f0f0;font-weight:500}
+
+/* SECTIONS */
+.sec{display:none;padding:88px 0 100px}
+.sec.on{display:block}
+.sec-h{margin-bottom:48px}
+.sec-h h2{font-size:22px;font-weight:600;color:#111;letter-spacing:-.01em;margin-bottom:8px}
+.sec-h p{font-size:14px;color:#888;line-height:1.7;max-width:600px}
+.div{height:1px;background:#f0f0f0;margin:52px 0}
+
+/* ══ § 1 INTRO ══ */
+.hero{padding:64px 0 60px;border-bottom:1px solid #ebebeb;margin-bottom:56px}
+.hero-eyebrow{font-size:11px;color:#c0c0c0;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px}
+.hero-name{font-size:44px;font-weight:600;color:#111;letter-spacing:-.03em;line-height:1.1;margin-bottom:10px}
+.hero-title{font-size:15px;color:#999;margin-bottom:36px}
+.hero-desc{font-size:15px;color:#555;max-width:640px;line-height:1.9;margin-bottom:0}
+.hero-desc strong{color:#111;font-weight:600}
+.hero-desc .target{
+  display:inline-block;margin-top:14px;
+  font-size:13px;color:#555;
+  background:#f7f7f7;border:1px solid #e8e8e8;
+  border-radius:6px;padding:8px 14px;
+}
+.hero-desc .target span{color:#0055d4;font-weight:600}
+
+/* STAT CARDS — icon + number + label */
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:14px;margin-top:52px;
+}
+.stat-card{
+  background:#fafafa;border:1px solid #ebebeb;
+  border-radius:14px;padding:28px 20px 24px;
+  text-align:center;transition:box-shadow .2s,border-color .2s;
+}
+.stat-card:hover{border-color:#d8d8d8;box-shadow:0 4px 20px rgba(0,0,0,.06)}
+.stat-icon{font-size:26px;margin-bottom:14px;display:block}
+.stat-val{
+  font-size:34px;font-weight:700;letter-spacing:-.04em;
+  line-height:1;margin-bottom:8px;
+}
+.stat-unit{font-size:15px;font-weight:400;margin-left:1px}
+.stat-lbl{font-size:12px;color:#999;line-height:1.55}
+.stat-card:nth-child(1) .stat-val{color:#0055d4}
+.stat-card:nth-child(2) .stat-val{color:#007a50}
+.stat-card:nth-child(3) .stat-val{color:#c84b00}
+.stat-card:nth-child(4) .stat-val{color:#6430c8}
+
+/* ══ § 2 STRENGTHS ══ */
+.str-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.str-card{
+  background:#fafafa;border:1px solid #ebebeb;
+  border-radius:12px;padding:28px 24px;
+  transition:border-color .2s,box-shadow .2s;
+}
+.str-card:hover{border-color:#d0d0d0;box-shadow:0 2px 16px rgba(0,0,0,.05)}
+.str-icon{font-size:20px;margin-bottom:14px}
+.str-name{font-size:11px;font-weight:700;color:#aaa;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+.str-text{font-size:14px;color:#555;line-height:1.78}
+.str-text strong{color:#111;font-weight:600}
+.str-num{
+  display:inline-block;
+  font-size:22px;font-weight:700;letter-spacing:-.03em;
+  margin-right:3px;
+}
+
+/* ══ § 3 ROADMAP ══ */
+/* arrow flow */
+.rm-flow{
+  display:grid;grid-template-columns:repeat(4,1fr) ;
+  position:relative;
+  gap:0;margin-bottom:56px;
+}
+.rm-flow::after{
+  content:'';position:absolute;
+  left:12.5%;right:12.5%;top:36px;
+  height:1px;background:#e0e0e0;z-index:0;
+}
+.rm-step{
+  position:relative;z-index:1;
+  display:flex;flex-direction:column;align-items:center;
+  padding:0 8px;
+}
+.rm-dot{
+  width:12px;height:12px;border-radius:50%;
+  border:2px solid #d0d0d0;background:#fff;
+  margin-bottom:16px;flex-shrink:0;
+}
+.rm-step:nth-child(1) .rm-dot{border-color:#0055d4;background:#0055d4}
+.rm-step:nth-child(2) .rm-dot{border-color:#007a50;background:#007a50}
+.rm-step:nth-child(3) .rm-dot{border-color:#c84b00;background:#c84b00}
+.rm-step:nth-child(4) .rm-dot{border-color:#6430c8;background:#6430c8}
+
+.rm-card{
+  background:#fafafa;border:1px solid #ebebeb;
+  border-radius:12px;padding:20px 18px;width:100%;
+}
+.rm-step:nth-child(1) .rm-card{border-top:3px solid #0055d4}
+.rm-step:nth-child(2) .rm-card{border-top:3px solid #007a50}
+.rm-step:nth-child(3) .rm-card{border-top:3px solid #c84b00}
+.rm-step:nth-child(4) .rm-card{border-top:3px solid #6430c8}
+
+.rm-period{font-size:11px;color:#bbb;margin-bottom:6px;letter-spacing:.04em}
+.rm-title{font-size:13px;font-weight:600;color:#222;margin-bottom:10px;line-height:1.4}
+.rm-step:nth-child(1) .rm-title{color:#0055d4}
+.rm-step:nth-child(2) .rm-title{color:#007a50}
+.rm-step:nth-child(3) .rm-title{color:#c84b00}
+.rm-step:nth-child(4) .rm-title{color:#6430c8}
+.rm-tags{display:flex;flex-wrap:wrap;gap:5px}
+.rm-tag{font-size:11px;padding:2px 8px;border-radius:4px;border:1px solid #e8e8e8;color:#666;background:#fff}
+
+/* ability grid */
+.rm-ability-title{
+  font-size:11px;color:#bbb;letter-spacing:.1em;text-transform:uppercase;
+  margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid #ebebeb;
+}
+.rm-ability-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.rm-ability-item{background:#fafafa;border:1px solid #ebebeb;border-radius:10px;padding:16px 18px}
+.rm-ability-item-name{font-size:13px;font-weight:600;color:#222;margin-bottom:5px}
+.rm-ability-item-desc{font-size:13px;color:#777;line-height:1.65}
+
+/* ══ § 4 EXPERIENCE ══ */
+.exp-item{margin-bottom:60px}
+.exp-item:last-child{margin-bottom:0}
+.exp-header{margin-bottom:22px;padding-bottom:18px;border-bottom:1px solid #ebebeb}
+.exp-period{font-size:11px;color:#bbb;letter-spacing:.08em;margin-bottom:6px}
+.exp-company{font-size:13px;color:#aaa;margin-bottom:6px}
+.exp-role{font-size:18px;font-weight:600;color:#111;letter-spacing:-.01em;line-height:1.3;margin-bottom:10px}
+.exp-tag-row{display:flex;flex-wrap:wrap;gap:6px}
+.etag{font-size:11px;padding:3px 10px;border-radius:5px;letter-spacing:.03em;font-weight:600}
+.etag-b{background:#eff6ff;color:#1d6ed8;border:1px solid #bfdbfe}
+.etag-o{background:#fff7ed;color:#c2410c;border:1px solid #fed7aa}
+.etag-g{background:#f0fdf4;color:#166534;border:1px solid #bbf7d0}
+.etag-p{background:#faf5ff;color:#6d28d9;border:1px solid #ddd6fe}
+.etag-n{background:#f9f9f9;color:#666;border:1px solid #e5e5e5}
+.exp-summary{
+  font-size:14px;color:#666;line-height:1.8;
+  padding:16px 20px;background:#fafafa;
+  border-radius:8px;border-left:3px solid #ddd;
+  margin:18px 0 16px;
+}
+.exp-points{list-style:none}
+.exp-points li{
+  font-size:14px;color:#444;line-height:1.8;
+  padding:13px 0 13px 20px;
+  border-bottom:1px solid #f4f4f4;
+  position:relative;
+}
+.exp-points li:last-child{border-bottom:none}
+.exp-points li::before{content:'';position:absolute;left:0;top:22px;width:6px;height:1px;background:#d0d0d0}
+.hi{color:#111;font-weight:600}
+.badge{
+  display:inline-block;font-size:10px;
+  padding:2px 8px;border-radius:4px;
+  margin-right:6px;font-weight:700;
+  letter-spacing:.05em;vertical-align:middle;
+}
+
+@media(max-width:640px){
+  .wrap{padding:0 20px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .str-grid,.rm-ability-grid{grid-template-columns:1fr}
+  .rm-flow{grid-template-columns:1fr 1fr}
+  .rm-flow::after{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-brand">Profile · 2026</span>
+    <div class="nav-links">
+      <a class="on" href="#" onclick="go('intro',this);return false">简介</a>
+      <a href="#" onclick="go('str',this);return false">核心优势</a>
+      <a href="#" onclick="go('rm',this);return false">Roadmap</a>
+      <a href="#" onclick="go('exp',this);return false">工作经历</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════
+     §1  简介
+══════════════════════════════════ -->
+<div id="s-intro" class="sec on">
+<div class="wrap">
+
+  <div class="hero">
+    <div class="hero-eyebrow">AI Product &amp; Operations · Alibaba · 15 Years</div>
+    <div class="hero-name">怀远</div>
+    <div class="hero-title">阿里云智能集团 · 大模型 MaaS 平台产品运营专家</div>
+    <p class="hero-desc">
+      扎根阿里生态 <strong>15 年</strong>、深耕 AI 业务 <strong>7 年</strong>的产品运营专家。<br/>
+      从 0 到 1 搭建阿里云百炼 MaaS 平台全链路运营体系，工作经历覆盖模型接入、分发管控、用户增长与供应商质量管理；<br/>
+      在店小蜜与阿里众包阶段主导 <strong>10+ ISV 及数据标注供应商</strong>的全程引入、考核与结算，具备<strong>供应链管控、合规治理、系统需求设计</strong>与跨 BU 大规模项目落地的一体化能力。<br/>
+      近三年绩效均在 <strong>3.5A 及以上</strong>，分别为 3.5A、3.5+A、3.75B。
+      <div class="target">目标岗位：<span>AI 大模型外部 API 采购与分发使用系统管理</span></div>
+    </p>
+  </div>
+
+  <!-- 4 stat cards -->
+  <div class="stats">
+    <div class="stat-card">
+      <span class="stat-icon">🗓️</span>
+      <div class="stat-val">15<span class="stat-unit">年</span></div>
+      <div class="stat-lbl">阿里系工作年限</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icon">🤖</span>
+      <div class="stat-val">7<span class="stat-unit">年</span></div>
+      <div class="stat-lbl">AI 业务深耕<br/>（百炼 MaaS · 店小蜜 · 达摩院）</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icon">🔗</span>
+      <div class="stat-val">10<span class="stat-unit">+</span></div>
+      <div class="stat-lbl">ISV &amp; 数据标注供应商<br/>引入·考核·结算全程管理</div>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icon">🚀</span>
+      <div class="stat-val">600<span class="stat-unit">万+</span></div>
+      <div class="stat-lbl">MaaS 平台注册用户<br/>3 年用增运营成果</div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════
+     §2  核心优势
+══════════════════════════════════ -->
+<div id="s-str" class="sec">
+<div class="wrap">
+
+  <div class="sec-h">
+    <h2>核心优势</h2>
+    <p>深度参与 AI 大模型 MaaS 平台全链路运营，在模型理解、供应商管理、合规风控、产品运营、用户增长及跨 BU 协同六大维度均有真实项目积累，形成较强的复合能力。</p>
+  </div>
+
+  <div class="str-grid">
+
+    <div class="str-card">
+      <div class="str-icon">🧠</div>
+      <div class="str-name">AI 模型理解与评测</div>
+      <div class="str-text">
+        3 年百炼 MaaS 平台运营，深度理解大模型 API 的<strong>接入→调度→计费</strong>全链路。在店小蜜阶段深度参与意图识别模型 BADCASE 修复与新模型数据评测，对<strong>模型能力边界、效果评测方法、质量追踪机制</strong>有第一手实操认知。主导建立三方 AI 模型质量评测平台，制定百余项品质管控标准。
+      </div>
+    </div>
+
+    <div class="str-card">
+      <div class="str-icon">🔗</div>
+      <div class="str-name">供应商管理能力</div>
+      <div class="str-text">
+        在店小蜜与阿里众包阶段独立对接并管理 <strong class="str-num">10+</strong> ISV 及数据标注供应商，全程负责引入资质评审、服务标准制定、日常考核评估及薪资结算，建立完整的<strong>供应商三级管控体系与 SLA 评估机制</strong>。
+      </div>
+    </div>
+
+    <div class="str-card">
+      <div class="str-icon">🛡️</div>
+      <div class="str-name">合规风控管理能力</div>
+      <div class="str-text">
+        4 年规则运营经验，主导建立淘系商家合规规则体系，联合算法团队构建<strong>恶意行为识别模型并推量上线</strong>，实现精准管控。2023 年起主导大模型上线安全体系建设及合规协议管理流程，长期与<strong>法务、安全、算法团队</strong>协作建立合规使用规范，具备数据安全治理与 API 合规管控的系统化思维。
+      </div>
+    </div>
+
+    <div class="str-card">
+      <div class="str-icon">📐</div>
+      <div class="str-name">产品运营能力</div>
+      <div class="str-text">
+        主导百炼 MaaS 平台从 0 到 1 的运营体系搭建，覆盖知识库建设、免费订阅策略、首登体验重构等模块，<strong>新用户 30 天激活流水提升 20pt</strong>。主导店小蜜 CRM 自动化能力建设，独立完成需求梳理→系统对接→规则配置→数据回流全流程，商家签约后开启使用率从 35% 跃升至 <strong>55%</strong>，付费转化率提升 2pt。
+      </div>
+    </div>
+
+    <div class="str-card">
+      <div class="str-icon">📈</div>
+      <div class="str-name">用户增长能力</div>
+      <div class="str-text">
+        主导百炼 × 阿里云官网用增系统跨团队需求对接，联动 SEM / 信息流付费投放，推动品牌页 UV<strong>稳定 4 万+</strong>，3 年累计平台注册用户突破 <strong>600 万</strong>。在店小蜜阶段主导 AI 训练师分级成长体系，推动<strong>逾 3 万名商家</strong>通过基础认证、近千名高阶训练师完成考核，搭建大规模用户运营闭环。
+      </div>
+    </div>
+
+    <div class="str-card">
+      <div class="str-icon">🤝</div>
+      <div class="str-name">跨 BU 协同能力</div>
+      <div class="str-text">
+        15 年阿里资深人脉，连续 4 年担任云栖大会百炼出品人，独立操盘展台与分论坛。长期联动<strong>产品、算法、法务、安全、销售、市场</strong>多职能部门推动复杂项目落地。主导阿里众包"外包转众包"多业务条线链路重构，跨职能整合资源、统一需求、推动系统化方案落地的能力成熟。
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════
+     §3  Roadmap
+══════════════════════════════════ -->
+<div id="s-rm" class="sec">
+<div class="wrap">
+
+  <div class="sec-h">
+    <h2>Career Roadmap</h2>
+    <p>15 年四大阶段演进，从 AI 业务一线出发，能力持续叠加复合</p>
+  </div>
+
+  <!-- 时间轴：近→远，左→右 -->
+  <div class="rm-flow">
+    <div class="rm-step">
+      <div class="rm-dot"></div>
+      <div class="rm-card">
+        <div class="rm-period">2022 — 至今</div>
+        <div class="rm-title">MaaS 平台<br/>全链路运营</div>
+        <div class="rm-tags">
+          <span class="rm-tag">MaaS 运营</span>
+          <span class="rm-tag">API 分发</span>
+          <span class="rm-tag">用户增长</span>
+          <span class="rm-tag">S 级品牌</span>
+          <span class="rm-tag">跨 BU 协同</span>
+        </div>
+      </div>
+    </div>
+    <div class="rm-step">
+      <div class="rm-dot"></div>
+      <div class="rm-card">
+        <div class="rm-period">2018 — 2022</div>
+        <div class="rm-title">AI 服务商生态<br/>搭建与运营</div>
+        <div class="rm-tags">
+          <span class="rm-tag">供应商管理</span>
+          <span class="rm-tag">AI 评测</span>
+          <span class="rm-tag">CRM 自动化</span>
+          <span class="rm-tag">成本管控</span>
+        </div>
+      </div>
+    </div>
+    <div class="rm-step">
+      <div class="rm-dot"></div>
+      <div class="rm-card">
+        <div class="rm-period">2014 — 2018</div>
+        <div class="rm-title">三方供应链<br/>采购与管理</div>
+        <div class="rm-tags">
+          <span class="rm-tag">ISV 引入</span>
+          <span class="rm-tag">质量管控</span>
+          <span class="rm-tag">需求梳理</span>
+          <span class="rm-tag">成本结算</span>
+        </div>
+      </div>
+    </div>
+    <div class="rm-step">
+      <div class="rm-dot"></div>
+      <div class="rm-card">
+        <div class="rm-period">2009 — 2014</div>
+        <div class="rm-title">规则治理<br/>数据安全合规</div>
+        <div class="rm-tags">
+          <span class="rm-tag">合规建设</span>
+          <span class="rm-tag">风控建模</span>
+          <span class="rm-tag">平台治理</span>
+          <span class="rm-tag">数据安全</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rm-ability-title">四阶段累积的核心能力项</div>
+  <div class="rm-ability-grid">
+    <div class="rm-ability-item">
+      <div class="rm-ability-item-name">AI 模型理解与质量评测</div>
+      <div class="rm-ability-item-desc">3 年百炼 MaaS 平台运营，深度理解大模型 API 的接入→调度→计费全链路。在店小蜜阶段深度参与意图识别模型 BADCASE 修复与新模型数据评测，积累了完整的模型能力评估与质量追踪方法论</div>
+    </div>
+    <div class="rm-ability-item">
+      <div class="rm-ability-item-name">供应商全生命周期管理</div>
+      <div class="rm-ability-item-desc">10+ ISV 引入评审、SLA 考核、质量管控与成本结算，三个业务阶段反复验证的完整闭环</div>
+    </div>
+    <div class="rm-ability-item">
+      <div class="rm-ability-item-name">数据合规与风控治理</div>
+      <div class="rm-ability-item-desc">4 年规则治理奠定数据安全基础，2023 年起主导大模型 API 合规使用规范与安全审核机制建设</div>
+    </div>
+    <div class="rm-ability-item">
+      <div class="rm-ability-item-name">产品运营与用户增长</div>
+      <div class="rm-ability-item-desc">百炼平台 600 万注册用户、激活率 +20pt，店小蜜付费转化 +2pt，多套跨系统需求落地经验</div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ══════════════════════════════════
+     §4  工作经历
+══════════════════════════════════ -->
+<div id="s-exp" class="sec">
+<div class="wrap">
+
+  <div class="sec-h">
+    <h2>工作经历</h2>
+    <p>15 年横跨合规风控、供应链管理、AI 产品运营与 MaaS 平台全链路的全栈运营积累，每个阶段的能力在下一阶段持续复用与深化。</p>
+  </div>
+
+  <!-- ── 阶段四 ── -->
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="exp-period">2022.04 — 至今</div>
+      <div class="exp-company">阿里云智能集团 · 百炼大模型平台</div>
+      <div class="exp-role">大模型 MaaS 平台全链路运营</div>
+      <div class="exp-tag-row">
+        <span class="etag etag-b">MaaS 平台运营</span>
+        <span class="etag etag-o">API 分发管控</span>
+        <span class="etag etag-g">用户增长</span>
+        <span class="etag etag-p">S 级品牌活动</span>
+        <span class="etag etag-n">跨 BU 协同</span>
+      </div>
+    </div>
+    <div class="exp-summary">
+      负责百炼 MaaS 平台从 0 到 1 的全链路运营体系建设，覆盖模型上线管理、用户增长、API 分发策略与跨部门项目推动，积累了对大模型平台"供应方—平台—使用方"完整运营闭环的深度认知。
+    </div>
+    <ul class="exp-points">
+      <li>
+        <span class="badge etag-b">用户增长</span>
+        <span class="hi">【MaaS 用户增长 + 跨系统需求梳理】</span>主导与阿里云官网用增团队的跨系统需求梳理与对接，联动制定 SEM / 信息流付费投放策略，<span class="hi">推动品牌页访问 UV 稳定 4 万+，3 年累计注册用户突破 600 万</span>。
+      </li>
+      <li>
+        <span class="badge etag-o">运营体系</span>
+        <span class="hi">【MaaS 运营体系从 0 到 1】</span>建立私域社群矩阵与知识库订阅策略，重构用户首登体验实现免登激活，<span class="hi">新用户 30 天激活流水提升 20pt</span>。主导 30+ 大模型产品上线，统筹法务、安全、市场等多职能协作。
+      </li>
+      <li>
+        <span class="badge etag-g">品牌活动</span>
+        <span class="hi">【云栖大会 S 级品牌操盘】</span>连续 4 年担任百炼产品云栖大会出品人，独立策划展台与分论坛，搭建三方合作大型展会品牌亮相，建立可复用的线下活动 SOP 机制。
+      </li>
+      <li>
+        <span class="badge etag-p">跨部门</span>
+        <span class="hi">【多职能跨 BU 项目推动】</span>长期联动产品、算法、法务、安全、销售、市场团队，推动品牌、堆云、商业化等多维项目落地，积累丰富的大型平台跨团队协作经验。
+      </li>
+    </ul>
+  </div>
+
+  <div class="div"></div>
+
+  <!-- ── 阶段三 ── -->
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="exp-period">2018.03 — 2022.03</div>
+      <div class="exp-company">达摩院·机器智能技术 / 阿里巴巴新零售智能服务</div>
+      <div class="exp-role">AI 服务商生态搭建与产品运营</div>
+      <div class="exp-tag-row">
+        <span class="etag etag-b">供应商接入管理</span>
+        <span class="etag etag-o">CRM 自动化</span>
+        <span class="etag etag-g">付费转化</span>
+        <span class="etag etag-p">AI 模型评测</span>
+        <span class="etag etag-n">训练师体系</span>
+      </div>
+    </div>
+    <div class="exp-summary">
+      负责店小蜜 AI 服务商生态的引入与运营管理，建立服务商三级管控体系，主导 CRM 自动化与付费转化链路重构，并深度参与 AI 模型评测与训练师能力体系建设。
+    </div>
+    <ul class="exp-points">
+      <li>
+        <span class="badge etag-b">供应商管理</span>
+        <span class="hi">【AI 服务商接入与全生命周期管理】</span>建立服务商需求对接→能力评估→合作引入→培育赋能→质量管控→动态汰换三级管控标准，沉淀完整的<span class="hi">资质审核、能力评测、SLA 管理与违规处置</span>体系，管理 10+ ISV 及数据标注供应商。
+      </li>
+      <li>
+        <span class="badge etag-o">系统建设</span>
+        <span class="hi">【CRM 系统化对接 + 链路自动化】</span>主导 CRM 能力建设与 leads 自动流转分发机制，独立完成需求梳理→系统对接→规则配置→数据回流全流程，实现销售线索在线自动化处理，分销商跟进效率大幅提升。
+      </li>
+      <li>
+        <span class="badge etag-g">转化管控</span>
+        <span class="hi">【付费转化链路设计与成本管控】</span>重构签约→激活全流程，商家签约后开启使用率从 <strong>35% 跃升至 55%</strong>，持续优化运营投放策略，<span class="hi">线上自然付费转化率提升 2pt</span>。
+      </li>
+      <li>
+        <span class="badge etag-p">AI 评测</span>
+        <span class="hi">【AI 算法模型协同优化】</span>深度参与店小蜜意图识别模型日常训练及 BADCASE 修复，协同算法团队完成新模型数据评测，<span class="hi">对 AI 模型能力边界与效果评测方法有第一手认知</span>。
+      </li>
+      <li>
+        <span class="badge etag-n">训练师体系</span>
+        <span class="hi">【商家 AI 训练师能力体系】</span>主导商家 AI 训练师分级成长路径与培训课程建设，<span class="hi">推动逾 3 万名商家通过基础认证、近千名高阶训练师完成考核</span>。
+      </li>
+    </ul>
+  </div>
+
+  <div class="div"></div>
+
+  <!-- ── 阶段二 ── -->
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="exp-period">2014.03 — 2018.03</div>
+      <div class="exp-company">集团客服体验事业群 · 社会化运营 / 大众评审 ToC</div>
+      <div class="exp-role">三方供应链采购与众包平台运营</div>
+      <div class="exp-tag-row">
+        <span class="etag etag-b">三方供应商引入</span>
+        <span class="etag etag-o">采购链路设计</span>
+        <span class="etag etag-g">质量管控</span>
+        <span class="etag etag-p">跨 BU 需求对齐</span>
+      </div>
+    </div>
+    <div class="exp-summary">
+      主导集团多业务"外包转众包"链路重构，独立建立多家三方标注公司及高校的引入对接机制，形成供应商资质审核、产能调度、质量验收与成本结算的完整体系。
+    </div>
+    <ul class="exp-points">
+      <li>
+        <span class="badge etag-b">采购链路</span>
+        <span class="hi">【多业务线采购链路重构】</span>主导里妈妈、淘宝直播、淘宝搜索等多业务条线"外包转众包"链路重构，独立完成需求方→供应链→采购→结算全链路设计，<span class="hi">有效降低运营成本</span>，推动模式规模化落地。
+      </li>
+      <li>
+        <span class="badge etag-o">供应商引入</span>
+        <span class="hi">【三方公司与高校资源引入对接】</span>独立引入并管理多家智能标注公司及高校（贵州百鸟河、人工智能小镇、益华学院、重庆外国语大学等），建立长期稳定的产学合作机制，沉淀<span class="hi">供应商资质审核标准、产能调度规则、质量验收机制与商务合作流程</span>。
+      </li>
+      <li>
+        <span class="badge etag-g">需求对齐</span>
+        <span class="hi">【跨 BU 需求统一对接】</span>对接集团多业务方差异化需求（不同任务类型、质量标准、时效要求），将其转化为可标准化、可调度、可结算的众包任务规格，形成<span class="hi">跨 BU 需求统一接入的方法论</span>。
+      </li>
+    </ul>
+  </div>
+
+  <div class="div"></div>
+
+  <!-- ── 阶段一 ── -->
+  <div class="exp-item">
+    <div class="exp-header">
+      <div class="exp-period">2009.07 — 2014.03</div>
+      <div class="exp-company">集团客服体验事业群 · 规则治理 / 消费者服务</div>
+      <div class="exp-role">平台合规治理与数据安全风控</div>
+      <div class="exp-tag-row">
+        <span class="etag etag-b">合规规则建设</span>
+        <span class="etag etag-o">风控建模</span>
+        <span class="etag etag-g">数据安全</span>
+        <span class="etag etag-n">平台治理</span>
+      </div>
+    </div>
+    <div class="exp-summary">
+      负责淘系平台经营合规规则制定与治理落地，联合算法团队构建恶意行为识别模型，积累了"规则制定→风险预防→违规识别→治理落地"的系统化风控方法论。
+    </div>
+    <ul class="exp-points">
+      <li>
+        <span class="badge etag-b">合规建设</span>
+        <span class="hi">【平台经营合规规则体系建设】</span>与法务及安全团队深度协作建立交易行为合规规则，主导升级公关 case 处理与预防机制，协同规则团队持续优化平台治理规则，<span class="hi">有效降低虚假交易与投诉风险</span>。
+      </li>
+      <li>
+        <span class="badge etag-o">风控建模</span>
+        <span class="hi">【恶意行为识别模型上线】</span>联合算法团队深度挖掘"账号创建至投诉行为"规律特征，构建恶意买家识别模型并推量上线，<span class="hi">在投诉发起之初即实现精准管控，大幅降低无效投诉量</span>。
+      </li>
+      <li>
+        <span class="badge etag-n">一线服务</span>
+        负责淘宝消费者服务热线工作（2009.07—2010.10），积累扎实的一线业务经验与用户视角，为后续运营管理奠定基础。
+      </li>
+    </ul>
+  </div>
+
+</div>
+</div>
+
+<script>
+function go(id,el){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('on'));
+  document.getElementById('s-'+id).classList.add('on');
+  el.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
